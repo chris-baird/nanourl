@@ -1,4 +1,4 @@
-# Nanourl
+# Nanourl - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build](https://img.shields.io/badge/Build-Passing-brightgreen)](#) ![PRs](https://img.shields.io/badge/PRs-welcome-green)
 
  1. [About](#About)
  2. [Features](#Features)

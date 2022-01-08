@@ -3,7 +3,7 @@
  1. [About](#About)
  2. [Features](#Features)
  3. [Technolgy](#Technology)
- 4. [Getting Started](#Getting%20Started)
+ 4. [Installation](#Installation)
  5. [Endpoints](#Endpoints)
  6. [Contributing](#Contributing)
  7. [Developer](#Developer)
@@ -24,7 +24,7 @@ Small lightweight URL shortener Rest API that provides several endpoints for cre
  - Shortid
  - Valid-url
 
-## Getting Started
+## Installation
 
 **Prerequisites**
 Node v16.x.x, NPM v8.x.x, and MongoDB Community Edition are all require for this project to run.

@@ -6,14 +6,14 @@ async function newUrl(req, res) {
   const url = req.body.url_input
   const urlCode = shortId.generate()
 
-  // checking if the url is valid
+  // Checking if the url is valid
   if (!validUrl.isWebUri(url)) {
     res.status(401).json({
       error: 'Invalid URL'
     })
   } else {
     try {
-      // checking if the url is already in the database
+      // Checking if the url is already in the database
       let nanoUrl = await URL.findOne({
         original_url: url
       })
@@ -41,4 +41,20 @@ async function newUrl(req, res) {
   }
 }
 
-module.exports = newUrl
+async function getUrl(req, res) {
+  try {
+    const urlParams = await URL.findOne({
+      short_url: req.params.short_url
+    })
+    if (urlParams) {
+      return res.redirect(urlParams.original_url)
+    } else {
+      return res.status(404).json('No URL found')
+    }
+  } catch (err) {
+    console.log(err)
+    res.status(500).json('Server error')
+  }
+}
+
+module.exports = { newUrl, getUrl }

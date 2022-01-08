@@ -4,6 +4,7 @@ const shortId = require('shortid')
 
 async function newUrl(req, res) {
   const url = req.body.url_input
+  console.log(req.body)
   const urlCode = shortId.generate()
 
   // Checking if the url is valid

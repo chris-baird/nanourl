@@ -1,7 +1,6 @@
-const router = require('express').Router()
-const { newUrl, getUrl } = require('../controllers/urlController')
-
-router.post('/nanourl/new', newUrl)
-router.get('/nanourl/:short_url?', getUrl)
+const router = require("express").Router()
+const { newUrl, getUrl } = require("../controllers/urlController")
+router.post("/", newUrl)
+router.get("/:short_url?", getUrl)
 
 module.exports = router

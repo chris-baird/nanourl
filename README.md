@@ -40,13 +40,13 @@ Node v16.x.x, NPM v8.x.x, and MongoDB Community Edition are all require for this
 ## Endpoints
 
 - **Base Url** [https://nanomyurl.herokuapp.com](https://nanomyurl.herokuapp.com/)
-- **POST** /api/nanourl/new
+- **POST** /s
 	 - Expects on the body of the request be the property **url_input** and the value being a valid url.
 		 - IE 'url_input': 'https://www.google.com/'
 	- Returns a short link that combined with the GET endpoint forms the short url. 
 		- IE lW6da7pHV
 		- https://nanomyurl.herokuapp.com/api/nanourl/lW6da7pHV 
- - **GET** /api/nanourl/:short_link
+ - **GET** /s:short_link
    - Expects the shortened url link returned from the POST request.
 	   - IE lW6da7pHV
 	   - https://nanomyurl.herokuapp.com/api/nanourl/lW6da7pHV

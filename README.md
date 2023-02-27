@@ -46,7 +46,7 @@ Node v16.x.x, NPM v8.x.x, and MongoDB Community Edition are all require for this
 	- Returns a short link that combined with the GET endpoint forms the short url. 
 		- IE lW6da7pHV
 		- https://nanomyurl.herokuapp.com/api/nanourl/lW6da7pHV 
- - **GET** /s:short_link
+ - **GET** /s/:short_link
    - Expects the shortened url link returned from the POST request.
 	   - IE lW6da7pHV
 	   - https://nanomyurl.herokuapp.com/api/nanourl/lW6da7pHV

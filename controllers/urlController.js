@@ -19,6 +19,8 @@ async function newUrl(req, res) {
         original_url: url,
       });
       if (nanoUrl) {
+        // Caching short code in Redis
+        await redis.set(nanoUrl.short_url, nanoUrl.original_url);
         res.json({
           original_url: nanoUrl.original_url,
           short_url: nanoUrl.short_url,
@@ -30,6 +32,8 @@ async function newUrl(req, res) {
           short_url: urlCode,
         });
         await nanoUrl.save();
+        // Caching short code in Redis
+        await redis.set(urlCode, url);
         res.json({
           original_url: nanoUrl.original_url,
           short_url: nanoUrl.short_url,

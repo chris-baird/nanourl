@@ -36,6 +36,7 @@
             navigator.clipboard.writeText(
               window.location.href + "s/" + data.short_url
             )
+            displayCopyFeedback()
           })
           copyButton.innerText = "Copy"
 
@@ -61,4 +62,17 @@
   document.querySelector("#modal").addEventListener("click", () => {
     resetFormState()
   })
+  // Display feedback to use when copy button is clicked
+  function displayCopyFeedback() {
+    const existingEl = document.querySelector(".copied")
+    // Feedback element already exists on page
+    if(existingEl) {
+      return
+    }
+    // Creates and displays feedback element
+    let feedbackEl = document.createElement("span")
+    feedbackEl.innerText = "Link copied!"
+    feedbackEl.classList.add("copied")
+    document.querySelector("#link").append(feedbackEl)
+  }
 })()

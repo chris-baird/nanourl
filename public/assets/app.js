@@ -1,5 +1,7 @@
 ;(() => {
   const generateButtonEl = document.getElementById("generate")
+  const inputEl = document.getElementById("url-input")
+  const errorEl = document.getElementById("error-message")
 
   generateButtonEl.addEventListener("click", () => {
     let userUrl = document.getElementById("url-input")
@@ -44,5 +46,9 @@
       .catch((err) => {
         console.log(err)
       })
+  })
+  // Clears error when inpit is focused
+  inputEl.addEventListener("focus", () => {
+    errorEl.innerText = ""
   })
 })()

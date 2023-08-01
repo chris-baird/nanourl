@@ -51,4 +51,14 @@
   inputEl.addEventListener("focus", () => {
     errorEl.innerText = ""
   })
+  // Resets the form state
+  function resetFormState() {
+    document.querySelector("#link").innerHTML = ""
+    document.getElementById("url-input").value = ""
+    document.getElementById("error-message").innerText = ""
+  }
+  // Resets state when clicked
+  document.querySelector("#modal").addEventListener("click", () => {
+    resetFormState()
+  })
 })()
